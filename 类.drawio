@@ -49,6 +49,18 @@
         <mxCell id="_dh5wbkqPe35B7HPucDX-13" value="可扩展性和灵活性：&lt;div&gt;1、ProducerConsumer修改为模板类，以支持不同而类型的缓冲区，不仅局限于int类型。&lt;/div&gt;&lt;div&gt;2、将缓冲区的大小作为构造函数的参数，使其更灵活&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="640" y="160" width="260" height="75" as="geometry" />
         </mxCell>
+        <mxCell id="_dh5wbkqPe35B7HPucDX-14" value="std::queue&amp;lt;T&amp;gt;（模板类）" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="450" width="310" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="_dh5wbkqPe35B7HPucDX-15" value="- c: Container" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="_dh5wbkqPe35B7HPucDX-14">
+          <mxGeometry y="26" width="310" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="_dh5wbkqPe35B7HPucDX-16" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="_dh5wbkqPe35B7HPucDX-14">
+          <mxGeometry y="60" width="310" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="_dh5wbkqPe35B7HPucDX-17" value="+ queue() //默认构造函数&lt;div&gt;+ explicit queue(const Container&amp;amp;) //使用指定容器构造&lt;/div&gt;&lt;div&gt;+ ~queue()&lt;/div&gt;&lt;div&gt;+ void push(const T&amp;amp; value) //添加元素到队尾&lt;/div&gt;&lt;div&gt;+ void pop() //移除队头元素&lt;/div&gt;&lt;div&gt;+ T&amp;amp; front() //访问队头元素&lt;/div&gt;&lt;div&gt;+ const T&amp;amp; front() const&amp;nbsp; //访问队头元素（常量）&lt;/div&gt;&lt;div&gt;+ T&amp;amp; back()&amp;nbsp; //访问队尾元素&lt;/div&gt;&lt;div&gt;+ const T&amp;amp; back() const&amp;nbsp; //访问队尾元素常量&lt;/div&gt;&lt;div&gt;+ boll empty() const&amp;nbsp; //检查队列是否为空&lt;/div&gt;&lt;div&gt;+ size_t size() const&amp;nbsp; //返回此时队列大小&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="_dh5wbkqPe35B7HPucDX-14">
+          <mxGeometry y="68" width="310" height="182" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
