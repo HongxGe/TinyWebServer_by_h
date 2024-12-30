@@ -62,16 +62,16 @@
           <mxGeometry y="68" width="310" height="182" as="geometry" />
         </mxCell>
         <mxCell id="xs4cJSa7HugyGd1e7JJE-1" value="std::atomic&amp;lt;T&amp;gt;（模板类）" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="770" y="450" width="310" height="250" as="geometry" />
+          <mxGeometry x="770" y="410" width="400" height="360" as="geometry" />
         </mxCell>
-        <mxCell id="xs4cJSa7HugyGd1e7JJE-2" value="- c: Container" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="xs4cJSa7HugyGd1e7JJE-1">
-          <mxGeometry y="26" width="310" height="34" as="geometry" />
+        <mxCell id="xs4cJSa7HugyGd1e7JJE-2" value="- value: T&amp;nbsp; //存储的原子值&lt;div&gt;- is_look_free: bool&amp;nbsp; //是否无锁操作的标志&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="xs4cJSa7HugyGd1e7JJE-1">
+          <mxGeometry y="26" width="400" height="34" as="geometry" />
         </mxCell>
         <mxCell id="xs4cJSa7HugyGd1e7JJE-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="xs4cJSa7HugyGd1e7JJE-1">
-          <mxGeometry y="60" width="310" height="8" as="geometry" />
+          <mxGeometry y="60" width="400" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="xs4cJSa7HugyGd1e7JJE-4" value="+ atomic(T) //默认构造函数&lt;div&gt;+ ~atomic()&lt;/div&gt;&lt;div&gt;+ load(): T //原子读取值&lt;/div&gt;&lt;div&gt;+ store(const T&amp;amp; value) //原子写入值&lt;/div&gt;&lt;div&gt;+ fetch_add(const T&amp;amp; value) //原子递增&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;（常量）&lt;/span&gt;&lt;/div&gt;&lt;div&gt;+ fetch_sub（const T&amp;amp; value）&amp;nbsp; //原子递减（常量）&lt;/div&gt;&lt;div&gt;+ compare_exchange_strong(const T&amp;amp; value1, const T&amp;amp; value2)&amp;nbsp; //???&lt;/div&gt;&lt;div&gt;//atomictemp += 5或者 -= 5;属于原子操作&lt;/div&gt;&lt;div&gt;//atomictemp++不属于原子操作&lt;/div&gt;&lt;div&gt;//++atomictemp属于原子操作&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="xs4cJSa7HugyGd1e7JJE-1">
-          <mxGeometry y="68" width="310" height="182" as="geometry" />
+        <mxCell id="xs4cJSa7HugyGd1e7JJE-4" value="+ atomic() //默认构造函数&lt;div&gt;+ atomic(value: T)&amp;nbsp; //带参数的构造函数&lt;br&gt;&lt;div&gt;+ ~atomic()&lt;/div&gt;&lt;div&gt;+ load() : T //原子读取值&lt;/div&gt;&lt;div&gt;+ store(value: T) : void //原子写入值&lt;/div&gt;&lt;div&gt;+ exchange(value: T) : T&amp;nbsp; //交换值，并返回旧值&lt;/div&gt;&lt;div&gt;+ compare_exchange_strong(expected: T&amp;amp;,desired: T)&amp;nbsp; : bool //???&lt;/div&gt;&lt;div&gt;+ compare_exchange_weak(expected: T&amp;amp;,desired: T)&amp;nbsp; : bool //???&lt;/div&gt;&lt;div&gt;+ fetch_add(value: T)&amp;nbsp; : T//原子加法&lt;/div&gt;&lt;div&gt;+ fetch_sub（value: T）: T&amp;nbsp; //原子减法&lt;/div&gt;&lt;div&gt;&lt;div&gt;+ fetch_and(value: T)&amp;nbsp; : T//原子与操作&lt;/div&gt;&lt;div&gt;+ fetch_or（value: T）: T&amp;nbsp; //原子或操作&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;+ fetch_xor(value: T)&amp;nbsp; : T//原子异或操作&lt;/div&gt;&lt;div&gt;+ is_lock_free() : bool&amp;nbsp; //检查是否无锁&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;//atomictemp += 5或者 -= 5;属于原子操作&lt;/div&gt;&lt;div&gt;//atomictemp++不属于原子操作&lt;/div&gt;&lt;div&gt;//++atomictemp不属于原子操作&lt;/div&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="xs4cJSa7HugyGd1e7JJE-1">
+          <mxGeometry y="68" width="400" height="292" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
