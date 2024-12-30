@@ -50,7 +50,7 @@
           <mxGeometry x="640" y="160" width="260" height="75" as="geometry" />
         </mxCell>
         <mxCell id="_dh5wbkqPe35B7HPucDX-14" value="std::queue&amp;lt;T&amp;gt;（模板类）" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="110" y="450" width="310" height="250" as="geometry" />
+          <mxGeometry x="120" y="440" width="310" height="250" as="geometry" />
         </mxCell>
         <mxCell id="_dh5wbkqPe35B7HPucDX-15" value="- c: Container" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="_dh5wbkqPe35B7HPucDX-14">
           <mxGeometry y="26" width="310" height="34" as="geometry" />
