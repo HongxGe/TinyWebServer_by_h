@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="25.0.3">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="26.0.2">
   <diagram name="第 1 页" id="A25osOTaRMVcd06Vr9zu">
     <mxGraphModel dx="1434" dy="738" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -16,38 +16,62 @@
         <mxCell id="lhPa5f_wbcNiDGnkOA1l-4" value="+readableBytes(): int&lt;div&gt;+peek(): const char*&lt;/div&gt;&lt;div&gt;+retrieve(int)&lt;/div&gt;&lt;div&gt;+retrieveAsString(): string&lt;/div&gt;&lt;div&gt;+append(const void*, int)&lt;/div&gt;&lt;div&gt;+prepend(const void*, int)&lt;/div&gt;&lt;div&gt;+swap(Buffer&amp;amp;)&lt;/div&gt;&lt;div&gt;-readFd(int): int&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="lhPa5f_wbcNiDGnkOA1l-1" vertex="1">
           <mxGeometry y="108" width="160" height="122" as="geometry" />
         </mxCell>
-        <mxCell id="_dh5wbkqPe35B7HPucDX-1" value="ProducerConsumer" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="_dh5wbkqPe35B7HPucDX-1" value="ProducerConsumer" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="360" y="130" width="190" height="230" as="geometry" />
         </mxCell>
-        <mxCell id="_dh5wbkqPe35B7HPucDX-2" value="-buffer: std::queue&amp;lt;int&amp;gt;&lt;div&gt;- mutex: pthread_mutex_t&lt;/div&gt;&lt;div&gt;-cond_empty: pthread_cond_t&lt;/div&gt;&lt;div&gt;-cond_full:&amp;nbsp; pthread_cond_t&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="_dh5wbkqPe35B7HPucDX-1">
+        <mxCell id="_dh5wbkqPe35B7HPucDX-2" value="-buffer: std::queue&amp;lt;int&amp;gt;&lt;div&gt;- mutex: pthread_mutex_t&lt;/div&gt;&lt;div&gt;-cond_empty: pthread_cond_t&lt;/div&gt;&lt;div&gt;-cond_full:&amp;nbsp; pthread_cond_t&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="_dh5wbkqPe35B7HPucDX-1" vertex="1">
           <mxGeometry y="26" width="190" height="84" as="geometry" />
         </mxCell>
-        <mxCell id="_dh5wbkqPe35B7HPucDX-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="_dh5wbkqPe35B7HPucDX-1">
+        <mxCell id="_dh5wbkqPe35B7HPucDX-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="_dh5wbkqPe35B7HPucDX-1" vertex="1">
           <mxGeometry y="110" width="190" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="_dh5wbkqPe35B7HPucDX-4" value="+ProducerComsumer()&lt;div&gt;+~ProducerComsumer()&lt;/div&gt;&lt;div&gt;+produce(int)&lt;/div&gt;&lt;div&gt;+consume(): int&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="_dh5wbkqPe35B7HPucDX-1">
+        <mxCell id="_dh5wbkqPe35B7HPucDX-4" value="+ProducerComsumer()&lt;div&gt;+~ProducerComsumer()&lt;/div&gt;&lt;div&gt;+produce(int)&lt;/div&gt;&lt;div&gt;+consume(): int&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="_dh5wbkqPe35B7HPucDX-1" vertex="1">
           <mxGeometry y="118" width="190" height="112" as="geometry" />
         </mxCell>
-        <mxCell id="_dh5wbkqPe35B7HPucDX-5" value="ProducerConsumer&amp;lt;T&amp;gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="_dh5wbkqPe35B7HPucDX-5" value="ProducerConsumer&amp;lt;T&amp;gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="970" y="140" width="190" height="230" as="geometry" />
         </mxCell>
-        <mxCell id="_dh5wbkqPe35B7HPucDX-6" value="-buffer: std::queue&amp;lt;T&amp;gt;&lt;div&gt;-buffer_size: size_t&lt;br&gt;&lt;div&gt;- mutex: pthread_mutex_t&lt;/div&gt;&lt;div&gt;-cond_empty: pthread_cond_t&lt;/div&gt;&lt;div&gt;-cond_full:&amp;nbsp; pthread_cond_t&lt;/div&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="_dh5wbkqPe35B7HPucDX-5">
+        <mxCell id="_dh5wbkqPe35B7HPucDX-6" value="-buffer: std::queue&amp;lt;T&amp;gt;&lt;div&gt;-buffer_size: size_t&lt;br&gt;&lt;div&gt;- mutex: pthread_mutex_t&lt;/div&gt;&lt;div&gt;-cond_empty: pthread_cond_t&lt;/div&gt;&lt;div&gt;-cond_full:&amp;nbsp; pthread_cond_t&lt;/div&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="_dh5wbkqPe35B7HPucDX-5" vertex="1">
           <mxGeometry y="26" width="190" height="84" as="geometry" />
         </mxCell>
-        <mxCell id="_dh5wbkqPe35B7HPucDX-7" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="_dh5wbkqPe35B7HPucDX-5">
+        <mxCell id="_dh5wbkqPe35B7HPucDX-7" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="_dh5wbkqPe35B7HPucDX-5" vertex="1">
           <mxGeometry y="110" width="190" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="_dh5wbkqPe35B7HPucDX-8" value="+ProducerComsumer(size_t)&lt;div&gt;+~ProducerComsumer()&lt;/div&gt;&lt;div&gt;+produce(item: const t&amp;amp;)&lt;/div&gt;&lt;div&gt;+consume(): T&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="_dh5wbkqPe35B7HPucDX-5">
+        <mxCell id="_dh5wbkqPe35B7HPucDX-8" value="+ProducerComsumer(size_t)&lt;div&gt;+~ProducerComsumer()&lt;/div&gt;&lt;div&gt;+produce(item: const t&amp;amp;)&lt;/div&gt;&lt;div&gt;+consume(): T&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="_dh5wbkqPe35B7HPucDX-5" vertex="1">
           <mxGeometry y="118" width="190" height="112" as="geometry" />
         </mxCell>
-        <mxCell id="_dh5wbkqPe35B7HPucDX-11" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+        <mxCell id="_dh5wbkqPe35B7HPucDX-11" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="590" y="244.5" as="sourcePoint" />
             <mxPoint x="940" y="245" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="_dh5wbkqPe35B7HPucDX-13" value="可扩展性和灵活性：&lt;div&gt;1、ProducerConsumer修改为模板类，以支持不同而类型的缓冲区，不仅局限于int类型。&lt;/div&gt;&lt;div&gt;2、将缓冲区的大小作为构造函数的参数，使其更灵活&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="_dh5wbkqPe35B7HPucDX-13" value="可扩展性和灵活性：&lt;div&gt;1、ProducerConsumer修改为模板类，以支持不同而类型的缓冲区，不仅局限于int类型。&lt;/div&gt;&lt;div&gt;2、将缓冲区的大小作为构造函数的参数，使其更灵活&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="640" y="160" width="260" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="_dh5wbkqPe35B7HPucDX-14" value="std::queue&amp;lt;T&amp;gt;（模板类）" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="120" y="440" width="310" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="_dh5wbkqPe35B7HPucDX-15" value="- c: Container" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="_dh5wbkqPe35B7HPucDX-14" vertex="1">
+          <mxGeometry y="26" width="310" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="_dh5wbkqPe35B7HPucDX-16" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="_dh5wbkqPe35B7HPucDX-14" vertex="1">
+          <mxGeometry y="60" width="310" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="_dh5wbkqPe35B7HPucDX-17" value="+ queue() //默认构造函数&lt;div&gt;+ explicit queue(const Container&amp;amp;) //使用指定容器构造&lt;/div&gt;&lt;div&gt;+ ~queue()&lt;/div&gt;&lt;div&gt;+ void push(const T&amp;amp; value) //添加元素到队尾&lt;/div&gt;&lt;div&gt;+ void pop() //移除队头元素&lt;/div&gt;&lt;div&gt;+ T&amp;amp; front() //访问队头元素&lt;/div&gt;&lt;div&gt;+ const T&amp;amp; front() const&amp;nbsp; //访问队头元素（常量）&lt;/div&gt;&lt;div&gt;+ T&amp;amp; back()&amp;nbsp; //访问队尾元素&lt;/div&gt;&lt;div&gt;+ const T&amp;amp; back() const&amp;nbsp; //访问队尾元素常量&lt;/div&gt;&lt;div&gt;+ boll empty() const&amp;nbsp; //检查队列是否为空&lt;/div&gt;&lt;div&gt;+ size_t size() const&amp;nbsp; //返回此时队列大小&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="_dh5wbkqPe35B7HPucDX-14" vertex="1">
+          <mxGeometry y="68" width="310" height="182" as="geometry" />
+        </mxCell>
+        <mxCell id="xs4cJSa7HugyGd1e7JJE-1" value="std::atomic&amp;lt;T&amp;gt;（模板类）" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="770" y="410" width="400" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="xs4cJSa7HugyGd1e7JJE-2" value="- value: T&amp;nbsp; //存储的原子值&lt;div&gt;- is_look_free: bool&amp;nbsp; //是否无锁操作的标志&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="xs4cJSa7HugyGd1e7JJE-1">
+          <mxGeometry y="26" width="400" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="xs4cJSa7HugyGd1e7JJE-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="xs4cJSa7HugyGd1e7JJE-1">
+          <mxGeometry y="60" width="400" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="xs4cJSa7HugyGd1e7JJE-4" value="+ atomic() //默认构造函数&lt;div&gt;+ atomic(value: T)&amp;nbsp; //带参数的构造函数&lt;br&gt;&lt;div&gt;+ ~atomic()&lt;/div&gt;&lt;div&gt;+ load() : T //原子读取值&lt;/div&gt;&lt;div&gt;+ store(value: T) : void //原子写入值&lt;/div&gt;&lt;div&gt;+ exchange(value: T) : T&amp;nbsp; //交换值，并返回旧值&lt;/div&gt;&lt;div&gt;+ compare_exchange_strong(expected: T&amp;amp;,desired: T)&amp;nbsp; : bool //???&lt;/div&gt;&lt;div&gt;+ compare_exchange_weak(expected: T&amp;amp;,desired: T)&amp;nbsp; : bool //???&lt;/div&gt;&lt;div&gt;+ fetch_add(value: T)&amp;nbsp; : T//原子加法&lt;/div&gt;&lt;div&gt;+ fetch_sub（value: T）: T&amp;nbsp; //原子减法&lt;/div&gt;&lt;div&gt;&lt;div&gt;+ fetch_and(value: T)&amp;nbsp; : T//原子与操作&lt;/div&gt;&lt;div&gt;+ fetch_or（value: T）: T&amp;nbsp; //原子或操作&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;+ fetch_xor(value: T)&amp;nbsp; : T//原子异或操作&lt;/div&gt;&lt;div&gt;+ is_lock_free() : bool&amp;nbsp; //检查是否无锁&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;//atomictemp += 5或者 -= 5;属于原子操作&lt;/div&gt;&lt;div&gt;//atomictemp++不属于原子操作&lt;/div&gt;&lt;div&gt;//++atomictemp不属于原子操作&lt;/div&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="xs4cJSa7HugyGd1e7JJE-1">
+          <mxGeometry y="68" width="400" height="292" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
